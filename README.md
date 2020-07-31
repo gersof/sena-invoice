@@ -1,6 +1,6 @@
 # Sena Invoice Demo
 
-Recuerden suscribirsen a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
+Recuerda suscribirte a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
 
 #Prerrequisitos:
 * Tener instalado en la maquina el motor de SQL Express 2019 o superior.
@@ -41,5 +41,5 @@ Agregar al archivo **appsettings.json** :
 si usted nombró la base de datos diferente, el DbContext generado NO se llamará InvoiceDbContext asi que debe corregirlo y es igual si usted modificó la cadena de conexion.
 
 
-Recuerden suscribirsen a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
+Recuerda suscribirte a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
 
