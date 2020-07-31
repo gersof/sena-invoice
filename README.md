@@ -14,11 +14,11 @@ para más información sobre entity framework core https://docs.microsoft.com/es
 * Si deseas crear un proyecto web (Server render) Abrir el visual studio -> Proyecto  Asp.Net Core Web Application -> Model View Controller
 * Si deseas crear un proyecto web api Abrir el visual studio -> Proyecto  Asp.Net Core Web Application -> API
 
-* Si deseas crear el scaffold desde las tablas de base de datos o sea DataBase Fisrt debes hacer lo siguiente:
-** Agregar las siguientes librerias via Nuget Microsoft.EntityFrameworkCore.Design y Microsoft.EntityFrameworkCore.SqlServer
-** Compilar luego de haber instalado las librerias
-** Ir a la raiz del proyecto es decir donde esté el archivo .csproj y ejecuar el comando en una sola linea
-dotnet ef dbcontext scaffold "Server=localhost,1433;Initial Catalog=InvoiceDb;Persist Security Info=False;User ID=sa;Password=Abc.123456;MultipleActiveResultSets=False;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+ Si deseas crear el scaffold desde las tablas de base de datos o sea DataBase Fisrt debes hacer lo siguiente:
+* Agregar las siguientes librerias via Nuget Microsoft.EntityFrameworkCore.Design y Microsoft.EntityFrameworkCore.SqlServer
+* Compilar luego de haber instalado las librerias
+* Ir a la raiz del proyecto es decir donde esté el archivo .csproj y ejecuar el comando en una sola linea
+**dotnet ef dbcontext scaffold "Server=localhost,1433;Initial Catalog=InvoiceDb;Persist Security Info=False;User ID=sa;Password=Abc.123456;MultipleActiveResultSets=False;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -o Models**
 
 Donde **localhost** es la dirección del servidor, **1433** es el número del puerto, el valor de Catalog es el nombre de la base de datos en este caso **InvoiceDb**, User Id
  es el usuario en este caso **sa** y password es la contraseña de ese usuario en este caso **Abc.123456**
