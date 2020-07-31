@@ -1,5 +1,7 @@
 # Sena Invoice Demo
 
+Recuerden suscribirsen a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
+
 #Prerrequisitos:
 * Tener instalado en la maquina el motor de SQL Express 2019 o superior.
 * Tener instalado el dotnet core framework sino lo tiene puedes descargarlo de acá https://dotnet.microsoft.com/download recuerden bajr el SDK y el Runtime en este proyecto se trabaja con la version 3.1.
