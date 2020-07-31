@@ -10,20 +10,34 @@ para más información sobre entity framework core https://docs.microsoft.com/es
 
 
 #Pasos:
-* Crear una base de datos en sql server  con el nombre que guste por ejemplo "InvoiceDb"
+* Crear una base de datos en sql server  con el nombre que guste por ejemplo "InvoiceDb" y ejecutar este script https://github.com/gersof/sena-invoice/blob/master/BD/InvoiceDb.sql
 * Si deseas crear un proyecto web (Server render) Abrir el visual studio -> Proyecto  Asp.Net Core Web Application -> Model View Controller
 * Si deseas crear un proyecto web api Abrir el visual studio -> Proyecto  Asp.Net Core Web Application -> API
 
  Si deseas crear el scaffold desde las tablas de base de datos o sea DataBase Fisrt debes hacer lo siguiente:
-* Agregar las siguientes librerias via Nuget Microsoft.EntityFrameworkCore.Design y Microsoft.EntityFrameworkCore.SqlServer
+* Agregar las siguientes librerias via Nuget **Microsoft.EntityFrameworkCore.Design** y **Microsoft.EntityFrameworkCore.SqlServer**
 * Compilar luego de haber instalado las librerias
 * Ir a la raiz del proyecto es decir donde esté el archivo .csproj y ejecuar el comando en una sola linea
 **dotnet ef dbcontext scaffold "Server=localhost,1433;Initial Catalog=InvoiceDb;Persist Security Info=False;User ID=sa;Password=Abc.123456;MultipleActiveResultSets=False;TrustServerCertificate=False;Connection Timeout=30;" Microsoft.EntityFrameworkCore.SqlServer -o Models**
 
 Donde **localhost** es la dirección del servidor, **1433** es el número del puerto, el valor de Catalog es el nombre de la base de datos en este caso **InvoiceDb**, User Id
  es el usuario en este caso **sa** y password es la contraseña de ese usuario en este caso **Abc.123456**
+ 
+Agregar al archivo **appsettings.json** :
+"ConnectionStrings": {
+    "InvoiceDb": "Server=localhost,1433;Initial Catalog=InvoiceDb;Persist Security Info=False;User ID=sa;Password=Abc.123456;MultipleActiveResultSets=False;TrustServerCertificate=False;Connection Timeout=30;"
+  },
+  
+ 
+ En la clase **startup.cs**  en el método **ConfigureServices** 
+ porner lo siguiente al final del método:
+            string conn = Configuration.GetConnectionString("InvoiceDb");
+            services.AddDbContext<InvoiceDbContext>(options =>
+                        options.UseSqlServer(conn));
+ 
+#NOTA 1
+si usted nombró la base de datos diferente, el DbContext generado NO se llamará InvoiceDbContext asi que debe corregirlo y es igual si usted modificó la cadena de conexion.
 
 
-
-
+Recuerden suscribirsen a nuestro canal en youtube https://www.youtube.com/channel/UCKBlXeFynTAUayZwC0ATOXg y seguirnos en facebook https://www.facebook.com/devtygers
 
